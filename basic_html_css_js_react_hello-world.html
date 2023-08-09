@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> React_js</title>
+    <style>
+        #heading{
+            color:green;
+        }
+    
+    </style>
+   
+</head>
+<body>
+<div id="jscript1"></div>
+<div id="jscript2"></div>
+<div id="root">ReddyAnnem</div>
+<div id="strong"></div>
+<div id="nusted"></div>
+    <script>
+       
+       //by html <h1> hello world </h1>
+       
+       //by js:
+       const head = document.createElement("h1");
+       head.innerHTML = "hello world by js"
+        const basictag = document.getElementById("jscript1");
+        basictag.appendChild(head)
+
+           const bold = document.createElement("em");
+           bold.innerHTML = "hello javascript";
+           const strong = document.getElementById("jscript2");
+           strong.appendChild(bold)
+     </script>
+
+<script crossorigin
+src="https://unpkg.com/react@18/umd/react.development.js">
+</script>
+<script crossorigin 
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</script> 
+
+
+  <script>
+    const heading = React.createElement("h1",{id:"heading"},"hello world from react!");
+    //console.log(heading);
+    console.log(heading);
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(heading) 
+
+    const emphesis = React.createElement("em",{id:"emphesis"},"Hi Indra");
+    const mainRoot = ReactDOM.createRoot(document.getElementById("strong"));
+    mainRoot.render(emphesis);
+  </script>
+
+
+
+  <script>
+    const family = React.createElement("div",{id:"parent"},[      
+        React.createElement("div",{id:"child"},[
+            React.createElement("h1",{},"I am Indra"),
+            React.createElement("h2",{},"ReddyAnnem")
+          ]),
+          React.createElement("div",{id:"child2"},[
+            React.createElement("h1",{},"I am Naveen"),
+            React.createElement("h2",{},"Kumarreddy")     
+            ]),
+        ]);
+    console.log(family);        
+      const cousin = ReactDOM.createRoot(document.getElementById("nusted"));
+      cousin.render(family);
+  </script>
+
+</body>
+</html>
+<!---
+    createElement = <strong>,<b>,<em>,<i>,<mark>,<marquee>,<ins>,<u>,<strike>
+-->
